@@ -29,12 +29,12 @@ LIMIT 25
         df = pd.DataFrame(countries, columns=['Country', 'Job Postings Count'])
         data = df.sort_values(by='Job Postings Count', ascending=False)
         
-        plt.figure(figsize=(10, 6))
+        plt.figure(figsize=(8, 5))
         sns.barplot(x='Country', y='Job Postings Count', data=data)
         plt.title('Top 25 Countries by Number of Job Postings', fontsize=20)
         plt.xlabel('')
         plt.ylabel('Count')
-        plt.xticks(rotation=60, fontsize=6)
+        plt.xticks(rotation=60, fontsize=8)
         plt.tight_layout()
 
         image_path = 'images/job_postings_by_country.png'
