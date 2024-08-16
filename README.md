@@ -5,6 +5,9 @@ _________________________________________________________________
 
 ![Job Postings by Country](images/job_postings_by_country.png)  
 ![Job Postings by Skill](images/job_postings_by_skill.png)  
+![Skills by Salary](images/skills_by_salary.png)  
+### The highest paid data analyst skills that are also much in demand:
+![Optiml Skills](images/optimal_skills.png) 
 _________________________________________________________________
 
 
