@@ -47,4 +47,14 @@ ORDER BY
 -------------
 
 
+--Jobs wiht average yearly salary by company in Estonia
+SELECT 
+    CONCAT(UPPER(name), ' - ', job_title_short) AS company_job, salary_year_avg
+FROM job_postings_fact AS jpf
+JOIN company_dim AS cd ON jpf.company_id = cd.company_id
+WHERE 
+    salary_year_avg IS NOT NULL AND job_country = 'Estonia'
+ORDER BY 
+    name, job_title_short, salary_year_avg
+-------------
 

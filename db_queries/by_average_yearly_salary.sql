@@ -170,6 +170,23 @@ GROUP BY
     skills
 ORDER BY
     av_salary DESC
+-------------
+
+
+--Salary ranges for data analyst jobs
+SELECT job_title_short, salary_year_avg,
+    CASE
+        WHEN salary_year_avg < 100000 THEN 'Under 100K'
+        WHEN salary_year_avg BETWEEN 100000 AND 200000 THEN 'Between 100000 AND 200000'
+        WHEN salary_year_avg >= 200000 THEN 'Over 200000'
+        ELSE 'NA'
+    END AS salary_range
+FROM 
+    job_postings_fact as jpf
+WHERE 
+    job_title_short = 'Data Analyst' AND salary_year_avg IS NOT NULL
+ORDER BY salary_year_avg DESC;
+
 
 
 
